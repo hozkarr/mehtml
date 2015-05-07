@@ -29,8 +29,9 @@ for ($i = 0; $i <= 20; $i++) {
     echo"<td><input type='text' name='last[]' id='name' value='".$last[$i]."'readonly ></td>";
     echo"<td><input type='text' name='text[]' id='name'></td>";
     echo"<td><input type='text' name='date[]' id='name' value='".$date[$i]."'readonly ></td>";
-    echo"<td><input type='submit' value='Enviar' ></td></tr>";
+    echo"</tr>";
 
 }
+echo"<td><input type='submit' value='Enviar' ></td></tr>";
 
 echo "</form></table>";
