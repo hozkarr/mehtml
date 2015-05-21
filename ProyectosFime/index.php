@@ -20,7 +20,7 @@ for ($i = 0; $i <= 20; $i++) {
 }
 
 echo "<table>";
-echo"<form action='injection.php' method='post'>";
+echo"<form>";
 echo"<tr><td>Nombre</td><td>Apellido</td><td>Comentario</td><td>Fecha</td>";
 
 for ($i = 0; $i <= 20; $i++) {
