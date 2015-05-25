@@ -4,16 +4,18 @@
 mysql_connect("localhost", "root", "kirby94") or die (mysql_error());
 mysql_select_db('google+') or die(mysql_error());
 
-$name = $_POST['name'];
-$last = $_POST['last'];
 $text = $_POST['text'];
-$date = $_POST['date'];
 
 
 for ($i = 0; $i <= 20; $i++) {
 
-    mysql_query("INSERT INTO `google+`.`post` (`id`, `name`, `last`, `comment`, `date`)
-        VALUES (NULL, '$name[$i]', '$last[$i]', '$text[$i]', '$date[$i]');") or die (mysql_error());
+    if($text[$i]== NULL){
+        continue;
+    }
+
+
+    mysql_query("INSERT INTO `google+`.`bad_words` (`id`, `bad_word`, `replacement`, `repeat`)
+        VALUES (NULL, '$text[$i]','[censurado]', '0');") or die (mysql_error());
 
 }
 
